@@ -1,0 +1,41 @@
+{
+  "name": "rollup-plugin-merge-and-inject-css",
+  "version": "1.1.0",
+  "author": "Norserium",
+  "description": "A rollup plugin to merge all css files and inject them to top of the styles blocks",
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "css",
+    "merge",
+    "inject"
+  ],
+  "files": [
+    "README.md",
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
+  "main": "dist/rollup-plugin-merge-and-inject-css.cjs.js",
+  "jsnext:main": "dist/rollup-plugin-merge-and-inject-css.es.js",
+  "homepage": "https://github.com/Norserium/rollup-plugin-merge-and-inject-css",
+  "bugs": {
+    "url": "https://github.com/Norserium/rollup-plugin-merge-and-inject-css/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Norserium/rollup-plugin-merge-and-inject-css.git"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "uid": "^0.0.2",
+    "rollup-pluginutils": "^2.4.1"
+  },
+  "devDependencies": {
+    "rollup": "^1.0.0",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-watch": "^4.3.1"
+  }
+}
