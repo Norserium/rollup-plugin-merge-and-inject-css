@@ -56,7 +56,7 @@ export default function (options = {}) {
 		},
 		generateBundle(options, bundle) {
 			for (var name in bundle) {
-				bundle[name].code = `\n${styleInject.toString()};\nstyleInject("${id}", "${cached.style.replace(/\n/g, '').replace(/"/g, '\\"')}");` + bundle[name].code;
+				bundle[name].code += `\n${styleInject.toString()};\nstyleInject("${id}", "${cached.style.replace(/\n/g, '').replace(/"/g, '\\"')}");`;
 			}
 		}
 	}
