@@ -62,6 +62,7 @@ This plugin will produce this (if all that components are the part of a generati
 
 The example of the rollup config with this plugin
 ```js
+import autoprefixer from 'autoprefixer';
 import Vue from 'rollup-plugin-vue';
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
@@ -95,9 +96,9 @@ export default {
     }),
     Vue({
       css: false,
-    }),
-    postcss({
-      inject: false
+      style: {
+        postcssPlugins: [autoprefixer]
+      }
     }),
     url(),
     babel({
