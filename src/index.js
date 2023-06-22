@@ -58,7 +58,7 @@ export default function (options = {}) {
 		generateBundle(options, bundle) {
 			var code = cached.fragments.join('')
 			for (var name in bundle) {
-				bundle[name].code += "\n" + (styleInject.toString()) + ";\nstyleInject(\"" + buildID + "\", \"" + (code.replace(/\n/g, '').replace(/"/g, '\\"')) + "\");";
+				bundle[name].code += "\n" + (styleInject.toString()) + ";\nstyleInject(\"" + buildID + "\", \"" + (code.replace(/\r?\n/g, '').replace(/"/g, '\\"')) + "\");";
 			}
 		}
 	}
