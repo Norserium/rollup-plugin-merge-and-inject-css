@@ -9,7 +9,7 @@ function styleInject(id, css) {
 	const head = document.head || document.getElementsByTagName('head')[0];
 	const styleElements  = head.getElementsByTagName('style');
 
-	// To prevent dublicate of the style code during the script reload
+	// To prevent duplicate of the style code during the script reload
 	for (let i = 0; i < styleElements.length; i++) {
 		if (styleElements[i].innerText.startsWith('/*for=' + id)) {
 			element = styleElements[i]

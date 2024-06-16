@@ -1,4 +1,5 @@
 import buble from 'rollup-plugin-buble';
+import uglify from 'rollup-plugin-uglify';
 
 var external = Object.keys(require('./package.json').dependencies);
 
@@ -9,5 +10,5 @@ export default {
 		{ file: 'dist/rollup-plugin-merge-and-inject-css.es.js', format: 'es'}
 	],
 	external: external,
-	plugins: [buble()]
+	plugins: [buble(), uglify()]
 };
